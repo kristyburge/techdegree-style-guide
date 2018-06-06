@@ -1,0 +1,40 @@
+// Fonts
+$font-url--google: 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900';
+$font-stack: Lato, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$base__font-size: 18px;
+$base__line: 30px;
+
+// Descriptive Colors
+$white: #fff;
+$dark-grey: #384047;
+$light-grey: lighten($dark-grey, 30%);
+$malibu: #51DDFC;
+$emerald: #63CC82;
+$sunglo: #E4757A;
+$coral: #FD7856;
+$purple-mtn-majesty: #927BC1;
+
+// Colors by function
+$color-text: $light-grey;
+$color-bg: $white;
+$color-accent: mix($malibu, $emerald, 57%);
+
+
+// UI Colors Map
+$ui-colors: (
+	default : $malibu,
+	success : $emerald,
+	error   : $sunglo,
+	warning : $coral,
+	info    : $purple-mtn-majesty
+);
+
+// Grid
+$grid-col-width: 65px;
+$grid-gutter-width: 20px;
+$grid-col-count: 12;
+$grid-container-max-width: 1050px;
+
+// Breakpoints
+$break-md: 768px;
+$break-lg: 1100px;

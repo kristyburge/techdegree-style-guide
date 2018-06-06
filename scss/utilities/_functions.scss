@@ -1,0 +1,16 @@
+// Import Google font
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+// Calculate em values from px
+@function em( $target, $context: $base__font-size ) {
+  @return ( $target / $context ) * 1em;
+}
+
+// Set the base context width for the grid system
+@function grid-context( $grid-col-width, $grid-col-count, $grid-gutter-width ) {
+  // create variable to store the $grid-context
+  $fluid-grid-context: ( $grid-col-width * $grid-col-count ) + ( $grid-gutter-width * ( $grid-col-count - 1 ) );
+  @return $fluid-grid-context;
+}

@@ -1,0 +1,9 @@
+// Get Colors
+@mixin bg-colors($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      @extend %btn;
+      background-color: $color;
+    }
+  }
+}
