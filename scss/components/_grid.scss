@@ -1,0 +1,29 @@
+.container {
+  background: $white;
+  margin: 0 auto;
+}
+
+.centered {
+
+}
+
+.theme__colors {
+
+}
+
+.grid__row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+// create a loop to calculate fluid grid sizes at larger screensize
+@for $i from 1 through $grid-col-count {
+  $context: grid-context( $grid-col-width, $grid-col-count, $grid-gutter-width );
+  $target: ( $grid-col-width * $i ) + ( $grid-gutter-width * ( $i - 1 ) );
+  // generates column classes
+  .grid__col--#{$i} {
+    @media (min-width: $break-md) {
+      width: percentage( $target / $context );
+    }
+  }
+}
