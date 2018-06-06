@@ -1,0 +1,24 @@
+.img {
+  &--logo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 165px;
+    margin: em(30px) auto;
+  }
+  &--avatar {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 199px;
+    margin: em(30px) auto;
+  }
+  &--frame {
+    border: 2px solid lighten($light-grey, 50%);
+    padding: 13px;
+    width: 100%;
+    max-width: 410px;
+    display: block;
+    margin: 0 auto;
+  }
+}

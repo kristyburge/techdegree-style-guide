@@ -1,0 +1,8 @@
+.btn {
+  // use the sass map
+  @include bg-colors($ui-colors);
+}
+
+.theme__colors {
+  // not sure where this class comes into play yet. 
+}

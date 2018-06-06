@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  // Screen reader text
+  &__label--hidden {
+    text-indent: -9999px;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 7px solid $color-accent;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-weight: 700;
+    color: $color-text;
+      &:focus {
+        outline: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: lighten($dark-grey, 65%);
+      }
+      &::placeholder {
+        color: $color-text;
+      }
+  }
+}
