@@ -335,40 +335,40 @@ p {
     -ms-flex-item-align: center;
     align-self: center; } }
 
-.grid__row:last-of-type .grid__col--1 {
+.grid__col--1 {
   background: #4e5a64; }
 
-.grid__row:last-of-type .grid__col--2 {
+.grid__col--2 {
   background: #fec9bb; }
 
-.grid__row:last-of-type .grid__col--3 {
+.grid__col--3 {
   background: #bdafd9; }
 
-.grid__row:last-of-type .grid__col--4 {
+.grid__col--4 {
   background: #3ebe64; }
 
-.grid__row:last-of-type .grid__col--5 {
+.grid__col--5 {
   background: #89d9a1; }
 
-.grid__row:last-of-type .grid__col--6 {
+.grid__col--6 {
   background: #04bbe3; }
 
-.grid__row:last-of-type .grid__col--7 {
+.grid__col--7 {
   background: #dc4a51; }
 
-.grid__row:last-of-type .grid__col--8 {
+.grid__col--8 {
   background: #fc5024; }
 
-.grid__row:last-of-type .grid__col--9 {
+.grid__col--9 {
   background: #eca0a3; }
 
-.grid__row:last-of-type .grid__col--10 {
+.grid__col--10 {
   background: #7558b1; }
 
-.grid__row:last-of-type .grid__col--11 {
+.grid__col--11 {
   background: #fea088; }
 
-.grid__row:last-of-type .grid__col--12 {
+.grid__col--12 {
   background: #83e7fd; }
 
 .grid__row {

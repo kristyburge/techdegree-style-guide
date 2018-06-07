@@ -13,7 +13,7 @@
 
 // figure out how NOT to target classes that aren't inside #grid
 @each $col, $color in $grid-colors {
-    .grid__row:last-of-type .grid__col--#{$col} {
+    .grid__col--#{$col} {
       background: $color;
     }
 }
