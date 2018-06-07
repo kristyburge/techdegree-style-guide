@@ -6,7 +6,6 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: 900;
-  -webkit-transition: opacity 0.5s;
   display: block;
   margin: 0.6666666667em 0; }
 
@@ -332,39 +331,21 @@ p {
 
 @media (min-width: 768px) {
   .centered {
-    -ms-flex-item-align: center;
     align-self: center;
     width: inherit; } }
 
 .grid__row {
   width: 90%;
   margin: 0.5555555556em auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
   .grid__row > [class^='grid__col--'] {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center; }
   @media (min-width: 768px) {
     .grid__row {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
       flex-direction: row; } }
 
 .grid__col--1.theme__colors {
@@ -429,8 +410,6 @@ p {
   .grid__col--12 {
     width: 100%; } }
 [class^='grid__col--'] {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 0.6666666667em;
   margin-bottom: 0.6666666667em;
@@ -501,12 +480,7 @@ p {
   line-height: 1.2; }
 
 .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%; }
   .form__label--hidden {
@@ -551,23 +525,14 @@ p {
 
 .nav {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 0;
   margin: 0 0 4.4444444444em;
   width: 80vw; }
   @media (min-width: 768px) {
     .nav {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
       flex-direction: row;
-      -ms-flex-pack: distribute;
       justify-content: space-around; } }
   .nav__item a:link, .nav__item a:visited {
     display: block;
