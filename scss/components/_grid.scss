@@ -8,47 +8,53 @@
   @media (min-width: $break-md) {
     -ms-flex-item-align: center;
         align-self: center;
+        width: inherit;
   }
-}
-
-// figure out how NOT to target classes that aren't inside #grid
-@each $col, $color in $grid-colors {
-    .grid__col--#{$col} {
-      background: $color;
-    }
 }
 
 .grid__row {
   width: 90%;
-  margin: 0 auto;
+  margin: em(10px) auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   > [class^='grid__col--'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   @media (min-width: $break-md) {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 
-// Create a conditional statement to check for the column number, then get the correct color from the $grid-colors map
-// @if map-get($grid-colors == 1) {
-//   .theme__colors {
-//     // Generate grid background colors
-//     background: red;
-//   }
-// }
-
-// @each $color, $value in $grid-colors {
-//     .grid__col--#{$color} {
-//       background-color: #{$value};
-//    }
-// }
-
+.grid__col {
+  // Loop through to add background to Grid section
+  @each $col, $color in $grid-colors {
+      &--#{$col}.theme__colors {
+        @extend %rounded;
+        background: $color;
+      }
+  }
+}
 
 // Create a loop to calculate fluid grid sizes at larger screensize
 @media (min-width: $break-md) {
@@ -69,15 +75,13 @@
     display: flex;
     margin-top: em(12px);
     margin-bottom: em(12px);
+    width: 100%;
 
   @media (min-width: $break-md) {
     @include double-amp(percentage( $grid-gutter-width / $context ));
-    // float: left;
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    &:last-of-type {
-      // float: right;
-    }
+
   }
 }

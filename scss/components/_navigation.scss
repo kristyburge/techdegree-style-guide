@@ -9,6 +9,7 @@
           flex-direction: column;
   padding: 0;
   margin: 0 0 em(80px);
+  width: 80vw;
   @media (min-width: $break-md) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -24,6 +25,7 @@
       &:link,
       &:visited {
         display: block;
+        width: 100%;
         color: $light-grey;
         text-align: center;
         text-decoration: none;
@@ -31,6 +33,7 @@
         font-size: em(20px);
         padding: em(20px);
         border-radius: em(10px);
+
       }
        &:hover,
        &:active {

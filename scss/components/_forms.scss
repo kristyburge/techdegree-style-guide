@@ -1,6 +1,12 @@
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 
   // Screen reader text
   &__label--hidden {
@@ -25,6 +31,15 @@
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         background-color: lighten($dark-grey, 65%);
+      }
+      &::-webkit-input-placeholder {
+        color: $color-text;
+      }
+      &:-ms-input-placeholder {
+        color: $color-text;
+      }
+      &::-ms-input-placeholder {
+        color: $color-text;
       }
       &::placeholder {
         color: $color-text;
