@@ -29,6 +29,21 @@ $ui-colors: (
 	info    : $purple-mtn-majesty
 );
 
+$grid-colors: (
+	1: lighten($dark-grey, 10%),
+	2: lighten($coral, 20%),
+	3: lighten($purple-mtn-majesty, 15%),
+	4: darken($emerald, 10%),
+	5: lighten($emerald, 10%),
+	6: darken($malibu, 20%),
+	7: darken($sunglo, 10%),
+	8: darken($coral, 10%),
+	9: lighten($sunglo, 10%),
+	10: darken($purple-mtn-majesty, 10%),
+	11: lighten($coral, 10%),
+	12: lighten($malibu, 10%)
+);
+
 // Grid
 $grid-col-width: 65px;
 $grid-gutter-width: 20px;

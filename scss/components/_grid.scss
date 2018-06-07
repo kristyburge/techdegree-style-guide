@@ -1,29 +1,83 @@
 .container {
   background: $white;
   margin: 0 auto;
+  padding: 0 em(20px);
 }
 
 .centered {
-
+  @media (min-width: $break-md) {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 
-.theme__colors {
-
+// figure out how NOT to target classes that aren't inside #grid
+@each $col, $color in $grid-colors {
+    .grid__row:last-of-type .grid__col--#{$col} {
+      background: $color;
+    }
 }
 
 .grid__row {
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > [class^='grid__col--'] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  @media (min-width: $break-md) {
+    flex-direction: row;
+  }
 }
 
-// create a loop to calculate fluid grid sizes at larger screensize
-@for $i from 1 through $grid-col-count {
-  $context: grid-context( $grid-col-width, $grid-col-count, $grid-gutter-width );
-  $target: ( $grid-col-width * $i ) + ( $grid-gutter-width * ( $i - 1 ) );
-  // generates column classes
-  .grid__col--#{$i} {
-    @media (min-width: $break-md) {
-      width: percentage( $target / $context );
+
+// Create a conditional statement to check for the column number, then get the correct color from the $grid-colors map
+// @if map-get($grid-colors == 1) {
+//   .theme__colors {
+//     // Generate grid background colors
+//     background: red;
+//   }
+// }
+
+// @each $color, $value in $grid-colors {
+//     .grid__col--#{$color} {
+//       background-color: #{$value};
+//    }
+// }
+
+
+// Create a loop to calculate fluid grid sizes at larger screensize
+@media (min-width: $break-md) {
+  @for $i from 1 through $grid-col-count {
+    $context: grid-context( $grid-col-width, $grid-col-count, $grid-gutter-width ) !global;
+    $target: ( $grid-col-width * $i ) + ( $grid-gutter-width * ( $i - 1 ) );
+    // generates column classes
+    .grid__col--#{$i} {
+        width: percentage( $target / $context );
+    }
+  }
+}
+
+// Column styles (target all column classes)
+[class^='grid__col--'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+
+  @media (min-width: $break-md) {
+    @include double-amp(percentage( $grid-gutter-width / $context ));
+    // float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:last-of-type {
+      // float: right;
     }
   }
 }

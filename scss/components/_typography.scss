@@ -5,6 +5,9 @@
   line-height: ( $base__line / $base__font-size );
   font-weight: 400;
   font-style: normal;
+    > .headline--secondary {
+      margin-left: em(22px);
+    }
 }
 
 .link {
@@ -30,13 +33,14 @@
     color: $color-accent;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: em(30px);
-    margin-left: 3%;
+    margin-bottom: em(60px, 36px); // 2em is h1 font-size = 18*2= 36px for context
+    margin-left: 5%;
   }
 
   &--secondary {
-    margin-top: em(80px);
-    margin-bottom: em(28px);
+    // font-size 18px - same as base font size
+    margin: em(80px) 0 em(28px);
+    font-size: ($base__font-size + 2px);
     font-weight: 300;
     line-height: 1.2;
   }

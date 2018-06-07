@@ -4,7 +4,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 165px;
-    margin: em(30px) auto;
+    margin: em(15px) auto;
   }
   &--avatar {
     display: block;
@@ -14,7 +14,7 @@
     margin: em(30px) auto;
   }
   &--frame {
-    border: 2px solid lighten($light-grey, 50%);
+    border: 1px solid lighten($light-grey, 10%);
     padding: 13px;
     width: 100%;
     max-width: 410px;

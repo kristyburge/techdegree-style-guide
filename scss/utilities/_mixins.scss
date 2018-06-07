@@ -1,9 +1,18 @@
-// Get Colors
+// Get Button Colors
 @mixin bg-colors($map) {
   @each $theme, $color in $map {
     &--#{$theme} {
       @extend %btn;
       background-color: $color;
     }
+  }
+}
+
+
+// Apply left margin to all siblings EXCEPT the first
+@mixin double-amp($margin: 1em) {
+  & + & {
+    margin-left: $margin;
+    @content;
   }
 }
