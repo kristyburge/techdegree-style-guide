@@ -13,7 +13,7 @@
 
 .grid__row {
   width: 90%;
-  margin: em(10px) auto;
+  margin: em(10px) auto em($base__line);
   display: flex;
   flex-direction: column;
   align-items: center;

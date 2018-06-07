@@ -38,8 +38,8 @@
   }
 
   &--secondary {
-    // font-size 18px - same as base font size
-    margin: em(80px) 0 em(28px);
+    // font-size 20px
+    margin: em(40px, 20px) 0 em(28px, 20px);
     font-size: ($base__font-size + 2px);
     font-weight: 300;
     line-height: 1.2;
