@@ -6,7 +6,10 @@
   font-weight: 400;
   font-style: normal;
     > .headline--secondary {
-      margin-left: em(22px);
+      margin-left: em(26px, 20px);
+      @media (min-width: $break-md) {
+        margin-left: em(50px, 20px);
+      }
     }
 }
 
@@ -14,6 +17,8 @@
   color: $color-accent;
   font-weight: 700;
   text-decoration: none;
+  width: 165px;
+  align-self: center;
 }
 
 .blockquote {

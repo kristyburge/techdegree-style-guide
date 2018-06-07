@@ -2,16 +2,15 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0;
   margin: 0 0 em(80px);
-  width: 80vw;
   @media (min-width: $break-md) {
     flex-direction: row;
-    justify-content: space-around;
+    margin-bottom: 0;
   }
 
   &__item {
-
     a {
       &:link,
       &:visited {

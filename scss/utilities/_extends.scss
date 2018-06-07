@@ -5,8 +5,6 @@
   color: $white;
   text-transform: uppercase;
   font-weight: 900;
-  display: block;
-  margin: em(12px) 0;
 }
 
 %btn {
@@ -14,6 +12,7 @@
   width: 100%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+  margin: em(12px) 0;
   &:hover {
     opacity: 0.7;
   }
