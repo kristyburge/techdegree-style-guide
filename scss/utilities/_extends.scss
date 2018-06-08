@@ -5,6 +5,9 @@
   color: $white;
   text-transform: uppercase;
   font-weight: 900;
+  @media (min-width: $break-lg) {
+    padding: 10px 30px;
+  }
 }
 
 %btn {

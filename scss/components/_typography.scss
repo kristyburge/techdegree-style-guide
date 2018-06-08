@@ -1,6 +1,7 @@
+// .container is set on the 'body' element
 .container {
   color: $color-text;
-  font-family: $font-stack;
+  font-family: $font-stack; // Lato Google Font
   font-size: $base__font-size;
   line-height: ( $base__line / $base__font-size );
   font-weight: 400;
@@ -11,6 +12,25 @@
         margin-left: em(50px, 20px);
       }
     }
+}
+
+.headline {
+  &--primary {
+    //font size: 36px
+    font-size: em($base__font-size * 2);
+    font-weight: 900;
+    line-height: 1.1;
+    color: $color-accent;
+    margin-bottom: em(60px, 36px); // 2em is h1 font-size = 18*2= 36px for context
+    margin-left: 5%;
+  }
+  &--secondary {
+    // font-size 20px
+    font-size: em($base__font-size + 2px);
+    font-weight: 300;
+    line-height: 1.2;
+    margin: em(40px, 20px) 0 em(28px, 20px);
+  }
 }
 
 .link {
@@ -30,23 +50,5 @@
   font-size: em(26px);
   line-height: 1.2;
   font-style: italic;
-}
-
-.headline {
-
-  &--primary {
-    color: $color-accent;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: em(60px, 36px); // 2em is h1 font-size = 18*2= 36px for context
-    margin-left: 5%;
-  }
-
-  &--secondary {
-    // font-size 20px
-    margin: em(40px, 20px) 0 em(28px, 20px);
-    font-size: ($base__font-size + 2px);
-    font-weight: 300;
-    line-height: 1.2;
-  }
+  color: $color-text;
 }

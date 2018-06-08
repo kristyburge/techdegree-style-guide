@@ -1,5 +1,4 @@
 .nav {
-  list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,19 +10,28 @@
   }
 
   &__item {
+    @media (min-width: $break-lg) {
+      margin: 0 15px;
+    }
     a {
       &:link,
       &:visited {
+        color: $light-grey;
         display: block;
         width: 100%;
-        color: $light-grey;
         text-align: center;
         text-decoration: none;
         font-weight: 300;
         font-size: em(20px);
         padding: em(20px);
         border-radius: em(10px);
-
+        transition: color 0.3s, background-color 0.3s;
+        @media (min-width: $break-md) {
+          padding: em(7px) em(20px);
+        }
+        @media (min-width: $break-lg) {
+          padding: em(3px) em(20px);
+        }
       }
        &:hover,
        &:active {

@@ -4,13 +4,14 @@
     &--#{$theme}.theme__colors {
       @extend %btn;
       background-color: $color;
+      @content;
       @media (min-width: $break-md) {
-        margin-right: 5px;
-        @media (min-width: $break-lg) {
-          margin-right: 30px;
-          &:last-of-type {
-            margin-right: 0;
-          }
+        margin-right: 10px;
+      }
+      @media (min-width: $break-lg) {
+        margin-right: 30px;
+        &:last-of-type {
+          margin-right: 0;
         }
       }
     }
