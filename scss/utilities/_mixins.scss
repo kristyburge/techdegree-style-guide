@@ -31,10 +31,10 @@
       @extend %btn;
       background-color: $color;
       @content;
-      @media (min-width: $break-md) {
+      @include mq(med) {
         margin-right: 10px;
       }
-      @media (min-width: $break-lg) {
+      @include mq(large) {
         margin-right: 30px;
         &:last-of-type {
           margin-right: 0;
