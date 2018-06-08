@@ -2,7 +2,7 @@
   background: $white;
   margin: 0 auto;
   padding: 0 em(20px);
-  @media (min-width: $break-lg) {
+  @include mq(large) {
     max-width: 1050px;
   }
 }
@@ -16,7 +16,7 @@
     &:first-of-type {
       align-items: center;
     }
-  @media (min-width: $break-md) {
+  @include mq(med) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  @media (min-width: $break-md) {
+  @include mq(med) {
     flex-direction: row;
     justify-content: flex-end;
   }
@@ -45,7 +45,7 @@
 }
 
 // Create a loop to calculate fluid grid sizes at larger screensize
-@media (min-width: $break-md) {
+@include mq(med) {
   @for $i from 1 through $grid-col-count {
     $context: grid-context( $grid-col-width, $grid-col-count, $grid-gutter-width ) !global;
     $target: ( $grid-col-width * $i ) + ( $grid-gutter-width * ( $i - 1 ) );
@@ -62,7 +62,7 @@
     margin-top: em(12px);
     margin-bottom: em(12px);
 
-  @media (min-width: $break-md) {
+  @include mq(med) {
     @include double-amp(percentage( $grid-gutter-width / $context ));
     min-height: 1px;
     padding-left: 10px;

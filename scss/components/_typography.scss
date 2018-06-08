@@ -8,7 +8,7 @@
   font-style: normal;
     > .headline--secondary {
       margin-left: em(26px, 20px);
-      @media (min-width: $break-md) {
+      @include mq(med) {
         margin-left: em(50px, 20px);
       }
     }

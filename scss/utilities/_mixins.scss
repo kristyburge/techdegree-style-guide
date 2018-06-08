@@ -1,3 +1,22 @@
+// Media Query
+@mixin mq($break){
+  @if $break == 'med' {
+    @media (min-width: $break-md) {
+      @content;
+    }
+  }
+  @else if $break == 'large' {
+    @media (min-width: $break-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "Oops! Please enter either 'med' or 'large' as argument for this mixin. You entered: '#{$break}'.";
+  }
+}
+
+// Flexbox Settings
+
 // Get Button Colors
 @mixin bg-colors($map) {
   @each $theme, $color in $map {
