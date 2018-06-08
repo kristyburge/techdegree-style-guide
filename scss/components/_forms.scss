@@ -1,6 +1,5 @@
 .form {
-  display: flex;
-  flex-direction: column;
+  @include flex-box(column);
   width: 100%;
 
   // Screen reader text

@@ -10,9 +10,7 @@
 .grid__row {
   width: 90%;
   margin: em(10px) auto em($base__line);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @include flex-box(column);
     &:first-of-type {
       align-items: center;
     }
@@ -24,8 +22,7 @@
 }
 
 [class^='grid__col--'] {
-  display: flex;
-  flex-direction: column;
+  @include flex-box(column);
   width: 100%;
   @include mq(med) {
     flex-direction: row;

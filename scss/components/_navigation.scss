@@ -1,7 +1,5 @@
 .nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flex-box(column, center);
   padding: 0;
   margin: 0 0 em(80px);
   @include mq(med) {

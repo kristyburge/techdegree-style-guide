@@ -16,6 +16,13 @@
 }
 
 // Flexbox Settings
+@mixin flex-box($dir: row, $just: flex-start, $align: stretch){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+    @content;
+}
 
 // Get Button Colors
 @mixin bg-colors($map) {
